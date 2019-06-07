@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Service Calculator</h1>
+Price <input id="total"><br>
+Tax 8% <input readonly><br>
+Tip <input type="radio" name="tip" value="10">10%
+<input type="radio" name="tip" value="15">15%
+<input type="radio" name="tip" value="20">20%<br>
+Total <input readonly><br>
+<button onclick="getTotal()" type="button">Calculate</button>
+
+<script>
+function getTotal() {
+    var total = document.getElementById('total').value;
+}</script>
+
+</body>
+</html>
