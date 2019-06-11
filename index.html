@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
 <h1>Service Calculator</h1>
-Price <input id="price"><br>
+Price <input class="price" id="price"><br>
 Tax 8% <input id="tax" readonly><br>
-Tip <input type="radio" id="ten" name="tip" value=".1">10%
+Tip <input class="firstRadioBtn" type="radio" id="ten" name="tip" value=".1">10%
 <input type="radio" id="fifteen" name="tip" value=".15">15%
 <input type="radio" id="twenty" name="tip" value=".2">20%<br>
-Total <input id="total" readonly><br>
+Total <input class="total" id="total" readonly><br>
 <button onclick="getTotal()" type="button">Calculate</button>
 
 <script>

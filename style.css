@@ -1,0 +1,20 @@
+input {
+    margin-bottom: 5px;
+}
+
+.price, .total {
+    margin-left: 16px;
+}
+
+.total {
+    margin-top: 5px;
+}
+
+.firstRadioBtn {
+    margin-left: 36px;
+}
+
+button {
+    margin-left: 96px;
+    margin-top: 10px;
+}
