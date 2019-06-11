@@ -3,17 +3,27 @@
 <body>
 
 <h1>Service Calculator</h1>
-Price <input id="total"><br>
-Tax 8% <input readonly><br>
-Tip <input type="radio" name="tip" value="10">10%
-<input type="radio" name="tip" value="15">15%
-<input type="radio" name="tip" value="20">20%<br>
-Total <input readonly><br>
+Price <input id="price"><br>
+Tax 8% <input id="tax" readonly><br>
+Tip <input type="radio" id="ten" name="tip" value=".1">10%
+<input type="radio" id="fifteen" name="tip" value=".15">15%
+<input type="radio" id="twenty" name="tip" value=".2">20%<br>
+Total <input id="total" readonly><br>
 <button onclick="getTotal()" type="button">Calculate</button>
 
 <script>
 function getTotal() {
-    var total = document.getElementById('total').value;
+    if(document.getElementById('ten').checked){
+        var tip = 1.1;
+    } else if(document.getElementById('fifteen').checked){
+        var tip = 1.15;
+    } else {
+        var tip = 1.2;
+    }
+
+    var total = document.getElementById('price').value;
+    document.getElementById('tax').value = "$" + (total * .08).toFixed(2);
+    document.getElementById('total').value = "$" + (total * 1.08 * tip).toFixed(2);
 }</script>
 
 </body>
