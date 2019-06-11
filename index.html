@@ -13,17 +13,26 @@ Total <input id="total" readonly><br>
 
 <script>
 function getTotal() {
+
+    var price = document.getElementById('price').value;
+    price = parseInt(price);
+
     if(document.getElementById('ten').checked){
-        var tip = 1.1;
+        var tip = 0.1;
     } else if(document.getElementById('fifteen').checked){
-        var tip = 1.15;
+        var tip = 0.15;
     } else {
-        var tip = 1.2;
+        var tip = 0.2;
     }
 
-    var total = document.getElementById('price').value;
-    document.getElementById('tax').value = "$" + (total * .08).toFixed(2);
-    document.getElementById('total').value = "$" + (total * 1.08 * tip).toFixed(2);
+    priceWithTax = price * 0.08;
+    priceWithTip = price * tip;
+    total = price + priceWithTax + priceWithTip;
+
+    document.getElementById('tax').value = "$" + (price * .08).toFixed(2);
+
+    document.getElementById('total').value = "$" + total.toFixed(2);
+
 }</script>
 
 </body>
